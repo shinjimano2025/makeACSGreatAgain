@@ -2,10 +2,6 @@
 
 This project aims to simplify and guide the way beginners make their first contribution. If you are looking to make your first contribution, follow the steps below.
 
-_If you're not comfortable with command line, [here are tutorials using GUI tools.](#tutorials-using-other-tools)_
-
-<img align="right" width="300" src="https://firstcontributions.github.io/assets/Readme/fork.png" alt="fork this repository" />
-
 #### If you don't have git on your machine, [install it](https://docs.github.com/en/get-started/quickstart/set-up-git).
 
 ## Fork this repository
@@ -32,7 +28,7 @@ where "url you just copied" (without the quotation marks) is the url to this rep
 For example:
 
 ```bash
-git clone git@github.com:this-is-you/first-contributions.git
+git clone git@github.com:this-is-you/makeACSGreatAgain.git
 ```
 
 where `this-is-you` is your GitHub username. Here you're copying the contents of the first-contributions repository on GitHub to your computer.
@@ -54,12 +50,16 @@ git switch -c your-new-branch-name
 For example:
 
 ```bash
-git switch -c add-alonzo-church
+git switch -c add-eda-yavuz
 ```
 
 ## Make necessary changes and commit those changes
 
-Now open `Contributors.md` file in a text editor, add your name to it. Don't add it at the beginning or end of the file. Put it anywhere in between. Now, save the file.
+Now open `Contributors.md` file in a text editor, add your name to it.
+
+```bash
+open contributors.md
+```
 
 <img align="right" width="450" src="https://firstcontributions.github.io/assets/Readme/git-status.png" alt="git status" />
 
@@ -68,7 +68,7 @@ If you go to the project directory and execute the command `git status`, you'll 
 Add those changes to the branch you just created using the `git add` command:
 
 ```bash
-git add Contributors.md
+git add contributors.md
 ```
 
 Now commit those changes using the `git commit` command:
@@ -79,6 +79,16 @@ git commit -m "Add your-name to Contributors list"
 
 replacing `your-name` with your name.
 
+
+## Authenticate with Personal Token
+
+Using the command below authenticate your machine to access your Github:
+
+```bash
+git remote set-url origin https://your-username:your_token@github.com/your-username/makeACSGreatAgain.git
+
+```
+
 ## Push changes to GitHub
 
 Push your changes using the command `git push`:
@@ -88,17 +98,6 @@ git push -u origin your-branch-name
 ```
 
 replacing `your-branch-name` with the name of the branch you created earlier.
-
-<details>
-<summary> <strong>If you get any errors while pushing, click here:</strong> </summary>
-
-- ### Authentication Error
-     <pre>remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
-  remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
-  fatal: Authentication failed for 'https://github.com/<your-username>/first-contributions.git/'</pre>
-  Go to [GitHub's tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on generating and configuring an SSH key to your account.
-
-</details>
 
 ## Submit your changes for review
 
